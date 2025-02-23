@@ -15,7 +15,7 @@ export default function Navbar() {
             background="rgba(240, 240, 240, 0.4)"
             hover="rgba(230, 230, 230, 0.4)"
             letterColor="#1c1c1c"
-            to="sign-in"
+            to="app.alino.online"
             strokeBorder={false}
             withLoader={true}
           >

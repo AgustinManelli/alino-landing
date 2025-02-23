@@ -22,7 +22,7 @@ export function Header() {
               background="#747474"
               hover="rgb(230, 230, 230)"
               letterColor="#fff"
-              to="sign-in"
+              to="app.alino.online"
               strokeBorder={true}
               aria-label="Prueba Alino"
               withLoader={true}

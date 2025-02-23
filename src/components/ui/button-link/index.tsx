@@ -51,8 +51,8 @@ export function ButtonLink({
   const combinedStyles = Object.assign({}, inlineStyles, style);
 
   return (
-    <Link
-      href={`${to}`}
+    <a
+      href={`https://www.${to}`}
       className={styles.buttonContainer}
       style={combinedStyles}
       onMouseEnter={() => {
@@ -66,6 +66,6 @@ export function ButtonLink({
         {children && <div className={styles.iconContainer}>{children}</div>}
         <p>{text}</p>
       </div>
-    </Link>
+    </a>
   );
 }
