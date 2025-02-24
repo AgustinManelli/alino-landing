@@ -10,6 +10,18 @@ export default function Navbar() {
     <div className={styles.container}>
       <nav className={styles.navbar}>
         <AlinoLogo style={{ height: "35px" }} />
+        <div className={styles.supportButtonContainer}>
+          <Button
+            text={"Apoyá a Alino"}
+            textColor={"#1c1c1c"}
+            backgroundColor={"rgba(0,0,0,0.04)"}
+            hoverColor={"rgba(0,0,0,0.08)"}
+            href={"https://cafecito.app/alinoapp"}
+            targetBlank={true}
+            iconRight={false}
+            effects={false}
+          />
+        </div>
         <Button
           text={"Comenzar"}
           textColor={"#1c1c1c"}

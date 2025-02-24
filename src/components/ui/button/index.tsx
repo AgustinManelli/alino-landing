@@ -10,26 +10,32 @@ interface ButtonProps {
   text?: string;
   textColor?: string;
   backgroundColor?: string;
+  hoverColor?: string;
   height?: number;
   href?: string;
+  targetBlank?: boolean;
   iconRight?: boolean;
   activeBorder?: boolean;
+  effects?: boolean;
 }
 
 export function Button({
   text = "button text",
   textColor = "#fff",
   backgroundColor = "#1c1c1c",
+  hoverColor,
   height = 35,
   href = "#",
+  targetBlank = false,
   iconRight = true,
   activeBorder = false,
+  effects = true,
 }: ButtonProps) {
   const [hover, setHover] = useState<boolean>(false);
   return (
     <div className={styles.container}>
       <AnimatePresence>
-        {hover && (
+        {hover && effects && (
           <motion.div
             className={styles.glow}
             initial={{ scale: 1, rotate: 0, opacity: 0 }}
@@ -57,8 +63,15 @@ export function Button({
       </AnimatePresence>
       <div
         className={`${styles.buttonContainer} ${
-          (hover || activeBorder) && styles.active
+          (hover || activeBorder) && effects && styles.active
         }`}
+        style={{
+          backgroundColor: effects
+            ? backgroundColor
+            : hover
+            ? hoverColor
+            : backgroundColor,
+        }}
         onMouseEnter={() => {
           setHover(true);
         }}
@@ -70,9 +83,16 @@ export function Button({
           className={styles.button}
           style={{
             height: `${height}px`,
-            backgroundColor: backgroundColor,
+            backgroundColor: effects
+              ? hoverColor
+                ? hover
+                  ? hoverColor
+                  : backgroundColor
+                : backgroundColor
+              : "transparent",
           }}
           href={href}
+          target={targetBlank ? "_blank" : "_self"}
         >
           <p style={{ color: textColor }}>{text}</p>
           <AnimatePresence>
