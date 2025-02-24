@@ -3,6 +3,7 @@
 import { ButtonLink } from "@/components/ui/button-link";
 
 import styles from "./header.module.css";
+import { Button } from "@/components/ui/button";
 
 export function Header() {
   return (
@@ -17,15 +18,12 @@ export function Header() {
             </p>
           </div>
           <div className={styles.ctaButton}>
-            <ButtonLink
-              text="Pruébalo ahora"
-              background="#747474"
-              hover="rgb(230, 230, 230)"
-              letterColor="#fff"
-              to="app.alino.online"
-              strokeBorder={true}
-              aria-label="Prueba Alino"
-              withLoader={true}
+            <Button
+              text={"Pruébalo ahora"}
+              href={"https://app.alino.online"}
+              height={40}
+              iconRight={false}
+              activeBorder
             />
           </div>
         </section>

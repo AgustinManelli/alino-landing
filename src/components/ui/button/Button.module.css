@@ -1,0 +1,107 @@
+.container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContainer {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 1px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.buttonContainer::before {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background: conic-gradient(
+    from 0deg,
+    #ffb6c1,
+    #ffc3a0,
+    #ffde91,
+    #e1f0b0,
+    #a4f1ce,
+    #a4dbf1,
+    #b3b5f1,
+    #e2a5ff,
+    #ffb6c1
+  );
+  filter: blur(15px);
+  animation: rotate360 5s linear infinite;
+}
+
+.active.buttonContainer::before {
+  opacity: 1;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.glow {
+  position: absolute;
+  width: auto;
+  height: 200%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #ffb6c1,
+    #ffc3a0,
+    #ffde91,
+    #e1f0b0,
+    #a4f1ce,
+    #a4dbf1,
+    #b3b5f1,
+    #e2a5ff,
+    #ffb6c1
+  );
+  filter: blur(20px);
+  opacity: 0.5;
+}
+
+.button {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  border: none;
+  border-radius: 15px;
+  background-color: #1c1c1c;
+  cursor: pointer;
+}
+
+.button p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.iconContainer {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
