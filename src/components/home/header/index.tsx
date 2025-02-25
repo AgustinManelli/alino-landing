@@ -11,7 +11,7 @@ export function Header() {
       <div className={styles.content}>
         <section className={styles.section}>
           <div className={styles.text}>
-            <h1>Tu espacio para estár organizado</h1>
+            <h1>Tu espacio para estar organizado</h1>
             <p>
               Mantén tus clases, tareas y proyectos en orden y al alcance de tu
               mano.
