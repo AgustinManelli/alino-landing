@@ -10,24 +10,24 @@ export default function Faq() {
         <Accordion
           items={[
             {
-              title: "¿De qué se trata Alino?",
+              title: "¿Qué es Alino?",
               content:
-                "Alino es una aplicación que te permite guardar tareas organizadas en distintas listas. Está diseñada para ayudarte a gestionar tu trabajo en formato to-do con horarios y calendarios para limitar los tiempos de las tareas. Aún está en una fase temprana de desarrollo.",
+                "Alino es una aplicación diseñada para organizar tus tareas en listas intuitivas, siguiendo el formato to-do. Te ayuda a gestionar tu tiempo con calendarios y horarios para mantener el control de tus tareas pendientes. Actualmente, sigue en una fase temprana de desarrollo.",
             },
             {
-              title: "¿Es completamente gratis?",
+              title: "¿Alino es gratis?",
               content:
-                "Si, Alino es completamente gratis. Contamos con un sistema de donaciones mediante la aplicación cafecito,  <a href='https://cafecito.app/alinoapp' target='_blank'>puedes apoyar a Alino aquí</a>",
+                "Sí, Alino es completamente gratuito. Si deseas apoyar su desarrollo y el mantenimiento de los servidores, puedes hacerlo a través de donaciones en <a href='https://cafecito.app/alinoapp' target='_blank'>Cafecito</a>. ¡Tu apoyo es invaluable, pero el simple hecho de que uses Alino ya significa mucho para nosotros!",
             },
             {
-              title: "¿Puedo enviar feedback sobre bugs o cambios?",
+              title: "¿Necesito una cuenta?",
               content:
-                "Agradeceríamos mucho que nos enviaras feedback sobre la aplicación. Tu opinión no solo nos ayudará a mejorar el funcionamiento, sino también a entender mejor las necesidades de los usuarios. <br />Puedes dejarnos un mensaje en <a href='mailto:ayuda@alino.online'>ayuda@alino.online</a>.",
+                "Sí, actualmente puedes usar la aplicación registrandote <a href='https://app.alino.online' target='_blank'>aquí</a> con una cuenta de google o github, aunque planeamos integrar un sistema de autentificación propio para que tu cuenta sea 100% personalizable.",
             },
             {
-              title: "¿Cómo notificar un bug o error?",
+              title: "¿Puedo enviar feedback o reportar bugs?",
               content:
-                'Para notificar un bug o error, por favor, especifica el tipo de error, su ubicación y cómo replicarlo, es decir, las acciones necesarias para reproducir el error. Envía esta información a <u>ayuda@alino.online</u> con el asunto <b>"Alino bug incident report</b>"',
+                "¡Por supuesto! Tu opinión es muy valiosa para mejorar Alino y adaptarlo mejor a las necesidades de los usuarios. Si encuentras un bug o tienes sugerencias, puedes enviarnos un mensaje a <a href='mailto:ayuda@alino.online'>ayuda@alino.online</a>. ¡Gracias por ayudarnos a crecer!",
             },
             {
               title: "¿Alino usa cookies?",

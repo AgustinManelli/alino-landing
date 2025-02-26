@@ -18,6 +18,19 @@
   margin: 0 120px;
 }
 
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.logoContainer span {
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 800;
+}
+
 .supportButtonContainer {
   width: fit-content;
   height: fit-content;

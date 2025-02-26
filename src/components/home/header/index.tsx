@@ -11,7 +11,7 @@ export function Header() {
     <div className={styles.container}>
       <Image
         src={headerDeco}
-        alt="Diseño multiplataforma"
+        alt="Alino, tu espacio para estar organizado."
         priority
         className={styles.img}
       />

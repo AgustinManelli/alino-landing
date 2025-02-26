@@ -15,7 +15,7 @@ export function Cards() {
           <div className={`${styles.card} ${styles.cardLeft}`}>
             <div className={styles.cardContent}>
               <div className={styles.infoContainer}>
-                <h2>Diseño minimalista e intuitivo y simple</h2>
+                <h2>Diseño minimalista e intuitivo</h2>
                 <p>
                   Alino ofrece una experiencia agradable para todos los usuarios
                 </p>

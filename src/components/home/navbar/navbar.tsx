@@ -9,7 +9,10 @@ export default function Navbar() {
   return (
     <div className={styles.container}>
       <nav className={styles.navbar}>
-        <AlinoLogo style={{ height: "35px" }} />
+        <div className={styles.logoContainer}>
+          <AlinoLogo style={{ height: "25px", overflow: "visible" }} />
+          <span>beta</span>
+        </div>
         <div className={styles.supportButtonContainer}>
           <Button
             text={"Apoyá a Alino"}
