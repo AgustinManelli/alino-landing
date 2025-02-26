@@ -10,18 +10,19 @@ export default function Faq() {
         <Accordion
           items={[
             {
-              title: "¿Es completamente gratis?",
-              content: "Si, Alino es completamente gratis.",
-            },
-            {
               title: "¿De qué se trata Alino?",
               content:
-                "Alino es una aplicación que te permite guardar tareas organizadas en distintas listas. Está diseñada para ayudarte a gestionar tu trabajo en formato to-do. Aún está en una fase temprana de desarrollo.",
+                "Alino es una aplicación que te permite guardar tareas organizadas en distintas listas. Está diseñada para ayudarte a gestionar tu trabajo en formato to-do con horarios y calendarios para limitar los tiempos de las tareas. Aún está en una fase temprana de desarrollo.",
+            },
+            {
+              title: "¿Es completamente gratis?",
+              content:
+                "Si, Alino es completamente gratis. Contamos con un sistema de donaciones mediante la aplicación cafecito,  <a href='https://cafecito.app/alinoapp' target='_blank'>puedes apoyar a Alino aquí</a>",
             },
             {
               title: "¿Puedo enviar feedback sobre bugs o cambios?",
               content:
-                "Agradeceríamos mucho que nos enviaras feedback sobre la aplicación. Tu opinión no solo nos ayudará a mejorar el funcionamiento, sino también a entender mejor las necesidades de los usuarios. <br />Puedes dejarnos un mensaje en <u>ayuda@alino.online</u>.",
+                "Agradeceríamos mucho que nos enviaras feedback sobre la aplicación. Tu opinión no solo nos ayudará a mejorar el funcionamiento, sino también a entender mejor las necesidades de los usuarios. <br />Puedes dejarnos un mensaje en <a href='mailto:ayuda@alino.online'>ayuda@alino.online</a>.",
             },
             {
               title: "¿Cómo notificar un bug o error?",
@@ -31,7 +32,7 @@ export default function Faq() {
             {
               title: "¿Alino usa cookies?",
               content:
-                "Sí, utilizamos cookies esenciales para el funcionamiento de la aplicación, como el inicio de sesión y la gestión de sesiones de usuario. Estas cookies son necesarias para garantizar una experiencia fluida y segura. No recopilamos información personal ni compartimos datos con terceros a través de estas cookies. Si deseas obtener más detalles, puedes contactarnos enviando un mensaje a <u>ayuda@alino.online</u>.",
+                "Sí, utilizamos cookies esenciales para el funcionamiento de la aplicación, como el inicio de sesión y la gestión de sesiones de usuario. Estas cookies son necesarias para garantizar una experiencia fluida y segura. No recopilamos información personal ni compartimos datos con terceros a través de estas cookies. Si deseas obtener más detalles, puedes contactarnos enviando un mensaje a <a href='mailto:ayuda@alino.online'>ayuda@alino.online</a>.",
             },
           ]}
         />

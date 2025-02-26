@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100vw;
   height: fit-content;
 }
@@ -12,7 +13,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1366px;
+  /* max-width: 1366px; */
+  max-width: 1000px;
   height: fit-content;
   margin: 0 120px 0 120px;
 }
@@ -22,7 +24,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   gap: 20px;
   height: fit-content;
   width: 80%;
@@ -32,19 +34,51 @@
 .text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   width: 100%;
 }
 
+.text::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  min-width: 1000px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.98) 30%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .text h1 {
   font-size: clamp(30px, 10vw, 60px);
-  font-weight: bold;
+  font-weight: 500;
   -webkit-user-select: none;
   user-select: none;
+  color: rgb(135, 24, 157);
+  text-align: center;
+  z-index: 1;
+}
+
+.text span {
+  position: relative;
+  font-weight: 700;
   background: -webkit-linear-gradient(
     135deg,
-    rgb(220, 220, 220) 20%,
-    rgb(135, 24, 157) 80%
+    #ffb6c1 20%,
+    #ffdab9 40%,
+    #b0e0e6 60%,
+    #dda0dd 80%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -52,14 +86,28 @@
 }
 
 .text p {
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(18px, 3vw, 22px);
-  color: #747474;
+  color: #aaaaaa;
+  max-width: 500px;
+  text-align: center;
+  z-index: 1;
+}
+
+.img {
+  position: absolute;
+  width: 110%;
+  min-width: 1200px;
+  height: auto;
+  opacity: 0.5;
+}
+
+.ctaButton {
+  z-index: 1;
 }
 
 @media only screen and (max-width: 850px) {
   .content {
-    flex-direction: column-reverse;
     margin: 0 20px 0 20px;
   }
 
@@ -73,5 +121,14 @@
     width: 70%;
     height: 70%;
     object-fit: contain;
+  }
+
+  .img {
+    transform: rotate(-45deg);
+    min-width: 200vw;
+  }
+
+  .text::before {
+    min-width: 700px;
   }
 }

@@ -1,62 +1,60 @@
-.accordion {
+.accordionContainer {
   width: 100%;
-  max-width: 800px;
-  margin: auto;
-  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   overflow: hidden;
-  box-shadow:
-    0 4px 12px rgba(12, 20, 66, 0.02),
-    0 30px 80px rgba(12, 20, 66, 0.08),
-    inset 0 0 0 0 #e6e9ed;
 }
 
 .accordionItem {
-  border-bottom: 1px solid #f3f3f3;
+  border-radius: 0px;
   overflow: hidden;
-  transition:
-    max-height 0.5s ease,
-    padding 0.5s ease;
+  background-color: transparent;
 }
 
-.accordionHeader {
+.accordionButton {
+  width: 100%;
+  padding: 1rem 1.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  background-color: #ffffff;
+  justify-content: space-between;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
+  border-radius: 20px;
 }
 
-.accordionHeader:hover {
-  background-color: #eaeaea;
+.accordionButton:hover {
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
-.accordionHeader h3 {
-  margin: 0;
-  font-size: 16px;
+.accordionTitle {
+  font-size: 1.125rem;
   font-weight: 500;
-  color: rgb(28, 28, 28);
-  user-select: none;
+  color: #fff;
+}
+
+.accordionIcon {
+  stroke: #fff;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.accordionContentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .accordionContent {
-  max-height: 0;
-  padding: 0 15px;
-  background-color: #fff;
-  transition:
-    max-height 0.5s ease,
-    padding 0.5s ease;
-  overflow: hidden;
-}
-
-.accordionItem.active .accordionContent {
-  max-height: 500px;
-  height: fit-content;
-  padding: 15px 15px;
-}
-
-.accordionContent {
-  font-size: 16px;
-  color: rgb(28, 28, 28);
+  width: 95%;
+  padding: 1rem 1.5rem;
+  color: white;
+  background-color: transparent;
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  /* border-right: 1px solid white; */
 }

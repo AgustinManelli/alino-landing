@@ -92,6 +92,7 @@
   background-color: #1c1c1c;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 .button p {

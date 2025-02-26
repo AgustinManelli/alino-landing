@@ -1,8 +1,6 @@
 .footerContainer {
   width: 100vw;
   height: fit-content;
-  background: linear-gradient(0deg, rgb(245, 245, 245) 50%, #fff);
-  margin-top: 100px;
 }
 
 .footerContent {
@@ -22,7 +20,7 @@
 .footerStripeContainer {
   width: 100vw;
   height: 20px;
-  background-color: rgb(28, 28, 28);
+  background-color: rgb(135, 24, 157);
   display: flex;
   justify-content: center;
   align-items: center;

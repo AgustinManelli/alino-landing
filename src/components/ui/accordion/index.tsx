@@ -1,55 +1,70 @@
-"use client";
-
-import { useState } from "react";
-
-import { ArrowThin } from "@/components/ui/icons/icons";
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+// import { ChevronDown } from 'lucide-react';
 import styles from "./accordion.module.css";
+import { ArrowThin } from "../icons/icons";
 
-interface AccordionItem {
+export interface AccordionItem {
   title: string;
   content: string;
 }
 
-interface props {
+interface AccordionProps {
   items: AccordionItem[];
 }
 
-export function Accordion({ items }: props) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+export const Accordion: React.FC<AccordionProps> = ({ items }) => {
+  const [expandedIndex, setExpandedIndex] = React.useState<number | null>(null);
 
-  const handleToggle = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
+  const toggleAccordion = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
   };
 
   return (
-    <div className={styles.accordion}>
+    <div className={styles.accordionContainer}>
       {items.map((item, index) => (
-        <div
-          key={index}
-          className={`${styles.accordionItem} ${activeIndex === index ? styles.active : ""}`}
-        >
-          <div
-            className={styles.accordionHeader}
-            onClick={() => handleToggle(index)}
+        <div key={index} className={styles.accordionItem}>
+          <motion.button
+            className={styles.accordionButton}
+            onClick={() => toggleAccordion(index)}
+            initial={false}
           >
-            <h3>{item.title}</h3>
-            <ArrowThin
-              style={{
-                strokeWidth: "1.5",
-                stroke: "#1c1c1c",
-                width: "20px",
-                height: "auto",
-                transform: activeIndex === index ? "rotate(90deg)" : "",
-                transition: "transform 0.3s ease",
-              }}
-            />
-          </div>
-          <div
-            className={styles.accordionContent}
-            dangerouslySetInnerHTML={{ __html: item.content }}
-          ></div>
+            <span className={styles.accordionTitle}>{item.title}</span>
+            <motion.div
+              animate={{ rotate: expandedIndex === index ? 180 : 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              {/* <ChevronDown className={styles.accordionIcon} /> */}
+              <div className={styles.accordionIcon}>
+                <ArrowThin
+                  style={{
+                    width: "20px",
+                    height: "auto",
+                    strokeWidth: "2",
+                  }}
+                />
+              </div>
+            </motion.div>
+          </motion.button>
+          <AnimatePresence initial={false}>
+            {expandedIndex === index && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                style={{ overflow: "hidden" }}
+                className={styles.accordionContentContainer}
+              >
+                <div
+                  className={styles.accordionContent}
+                  dangerouslySetInnerHTML={{ __html: item.content }}
+                ></div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       ))}
     </div>
   );
-}
+};

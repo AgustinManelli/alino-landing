@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
-
 import { StorageAnimation } from "./storage-animation";
 import Image from "next/image";
 import minimalism from "../../../../public/images/tile-resource.webp";
@@ -14,10 +12,10 @@ export function Cards() {
     <section className={styles.container}>
       <div className={styles.containerLimit}>
         <article className={styles.cardsContainer}>
-          <motion.div className={styles.card} initial={{ scale: 0.9 }}>
+          <div className={`${styles.card} ${styles.cardLeft}`}>
             <div className={styles.cardContent}>
               <div className={styles.infoContainer}>
-                <h2>Diseño minimalista e intuitivo</h2>
+                <h2>Diseño minimalista e intuitivo y simple</h2>
                 <p>
                   Alino ofrece una experiencia agradable para todos los usuarios
                 </p>
@@ -31,12 +29,12 @@ export function Cards() {
                 />
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div className={styles.card}>
+          <div className={styles.card}>
             <div className={styles.cardContent}>
               <div className={styles.infoContainer}>
-                <h2>Almacenamiento en la nube</h2>
+                <h2>Almacenamiento de tareas en la nube</h2>
                 <p>
                   Toda tu información se encuentra guardada y protegida en la
                   nube
@@ -46,9 +44,9 @@ export function Cards() {
                 <StorageAnimation />
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div className={styles.card} initial={{ scale: 0.9 }}>
+          <div className={`${styles.card} ${styles.cardRight}`}>
             <div className={styles.cardContent}>
               <div className={styles.infoContainer}>
                 <h2>Diseño Multiplataforma</h2>
@@ -63,7 +61,7 @@ export function Cards() {
                 />
               </div>
             </div>
-          </motion.div>
+          </div>
         </article>
       </div>
     </section>
