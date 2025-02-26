@@ -1,13 +1,16 @@
 .footerContainer {
   width: 100vw;
   height: fit-content;
+  background-color: rgb(135, 24, 157);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footerStripe {
   width: 100vw;
   max-width: 1366px;
   height: 20px;
-  background-color: rgb(135, 24, 157);
   display: flex;
   justify-content: space-between;
   align-items: center;
