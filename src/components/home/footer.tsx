@@ -1,8 +1,8 @@
 "use client";
 
-import { AlinoLogo, Cafecito, Instagram } from "../ui/icons/icons";
+import { AlinoLogo, Cafecito, Heart, Instagram } from "../ui/icons/icons";
 import Image from "next/image";
-import img from "../../../public/images/alino-footer.webp";
+import img from "../../../public/images/alinofooter.png";
 import styles from "./footer.module.css";
 import { Button } from "../ui/button";
 
@@ -12,7 +12,12 @@ export default function Footer() {
     <div className={styles.footerContainer}>
       <div className={styles.footerStripe}>
         <div className={styles.topText}>
-          Comienza la experiencia Alino
+          <div className={styles.textContainer}>
+            <p className={styles.text}>Comienza la experiencia Alino</p>
+            <p className={styles.desc}>
+              Una forma simple y efectiva de gestionar tu día
+            </p>
+          </div>
           <Button
             text={"Comenzar"}
             textColor={"#1c1c1c"}
@@ -28,6 +33,19 @@ export default function Footer() {
         />
         <div className={styles.footerEnd}>
           <AlinoLogo style={{ height: "25px", fill: "#fff" }} decoFill="#fff" />
+          <p className={styles.madeby}>
+            made with{" "}
+            <span>
+              <Heart
+                style={{
+                  height: "14px",
+                  fill: "#fff",
+                  transform: "translateY(2px)",
+                }}
+              />
+            </span>{" "}
+            by Alino
+          </p>
           <div className={styles.socialMediaLinks}>
             <a href="https://www.instagram.com/alinoapp" target="_blank">
               <Instagram
@@ -37,7 +55,7 @@ export default function Footer() {
             <a href="https://cafecito.app/alinoapp" target="_blank">
               <Cafecito
                 style={{ width: "auto", height: "20px", fill: "#fff" }}
-                back={"rgb(135, 24, 157)"}
+                back={"#450057"}
               />
             </a>
           </div>
