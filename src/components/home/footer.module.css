@@ -1,11 +1,11 @@
 .footerContainer {
   width: 100vw;
-  min-height: 50vh;
   height: fit-content;
   background-color: #450057;
   display: flex;
   justify-content: center;
   align-items: end;
+  user-select: none;
 }
 
 .footerStripe {

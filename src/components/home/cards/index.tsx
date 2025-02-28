@@ -26,6 +26,7 @@ export function Cards() {
                   alt="Diseño multiplataforma"
                   priority
                   className={styles.img}
+                  draggable={false}
                 />
               </div>
             </div>
@@ -58,6 +59,7 @@ export function Cards() {
                   alt="Diseño multiplataforma"
                   priority
                   className={styles.img}
+                  draggable={false}
                 />
               </div>
             </div>

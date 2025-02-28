@@ -14,6 +14,7 @@ export function Header() {
         alt="Alino, tu espacio para estar organizado."
         priority
         className={styles.img}
+        draggable={false}
       />
       <div className={styles.content}>
         <section className={styles.section}>

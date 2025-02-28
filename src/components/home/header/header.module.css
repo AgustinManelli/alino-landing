@@ -100,6 +100,7 @@
   min-width: 1200px;
   height: auto;
   opacity: 0.5;
+  user-select: none;
 }
 
 .ctaButton {

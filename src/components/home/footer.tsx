@@ -3,11 +3,11 @@
 import { AlinoLogo, Cafecito, Heart, Instagram } from "../ui/icons/icons";
 import Image from "next/image";
 import img from "../../../public/images/alinofooter.png";
+import { motion } from "motion/react";
 import styles from "./footer.module.css";
 import { Button } from "../ui/button";
 
 export default function Footer() {
-  var year = new Date().getFullYear();
   return (
     <div className={styles.footerContainer}>
       <div className={styles.footerStripe}>
@@ -30,6 +30,7 @@ export default function Footer() {
           alt="Alino, tu espacio para estar organizado."
           priority
           className={styles.img}
+          draggable={false}
         />
         <div className={styles.footerEnd}>
           <AlinoLogo style={{ height: "25px", fill: "#fff" }} decoFill="#fff" />
@@ -47,17 +48,25 @@ export default function Footer() {
             by Alino
           </p>
           <div className={styles.socialMediaLinks}>
-            <a href="https://www.instagram.com/alinoapp" target="_blank">
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              href="https://www.instagram.com/alinoapp"
+              target="_blank"
+            >
               <Instagram
                 style={{ width: "auto", height: "20px", fill: "#fff" }}
               />
-            </a>
-            <a href="https://cafecito.app/alinoapp" target="_blank">
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              href="https://cafecito.app/alinoapp"
+              target="_blank"
+            >
               <Cafecito
                 style={{ width: "auto", height: "20px", fill: "#fff" }}
                 back={"#450057"}
               />
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>
