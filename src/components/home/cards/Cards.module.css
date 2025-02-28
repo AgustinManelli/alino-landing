@@ -5,6 +5,7 @@
   width: 100vw;
   height: fit-content;
   z-index: 2;
+  padding: 100px 0;
 }
 
 .containerLimit {
