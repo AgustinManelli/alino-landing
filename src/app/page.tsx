@@ -28,9 +28,11 @@ export default function Home() {
       />
       <Navbar />
       <Header />
-      <Cards />
-      <AppInformation />
-      <Faq />
+      <div className="containerFrame">
+        <Cards />
+        <AppInformation />
+        <Faq />
+      </div>
       <Footer />
     </main>
   );

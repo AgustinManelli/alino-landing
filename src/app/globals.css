@@ -47,11 +47,27 @@ body {
   height: 100%;
   width: 100%;
   font-family: var(--font-inter), sans-serif;
-  perspective: 1000px;
+  background-color: rgb(69, 0, 87);
 }
 
 a {
   color: inherit;
+}
+
+.containerFrame {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  width: calc(100% - 10px);
+  height: 100%;
+  padding: 100px 0px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  box-shadow: rgba(12, 20, 66, 0.02) 0px 4px 12px,
+    rgba(12, 20, 66, 0.08) 0px 30px 80px,
+    rgb(230, 233, 237) 0px 0px 0px 0px inset;
+  margin: 0px 5px;
 }
 
 @media all and (display-mode: standalone) {

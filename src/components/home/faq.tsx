@@ -6,7 +6,12 @@ export default function Faq() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h3 className={styles.title}>faq</h3>
+        <div className={styles.header}>
+          <h2>
+            Preguntas <span className={styles.highlight}>frecuentes</span>
+          </h2>
+          <p className={styles.subtitle}>¿Tienes dudas sobre Alino?</p>
+        </div>
         <Accordion
           items={[
             {

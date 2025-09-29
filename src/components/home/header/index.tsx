@@ -2,20 +2,11 @@
 
 import styles from "./header.module.css";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import headerDeco from "./../../../../public/images/header-deco.png";
 import { Underline } from "@/components/ui/icons/icons";
 
 export function Header() {
   return (
     <div className={styles.container}>
-      {/* <Image
-        src={headerDeco}
-        alt="Alino, tu espacio para estar organizado."
-        priority
-        className={styles.img}
-        draggable={false}
-      /> */}
       <div className={styles.content}>
         <section className={styles.section}>
           <div className={styles.text}>
@@ -29,10 +20,10 @@ export function Header() {
                     bottom: "-5%",
                     right: "50%",
                     width: "70%",
-                    zIndex: "-1",
-                    fill: "rgb(135, 24, 157)",
+                    zIndex: "+1",
+                    fill: "#ffffff",
                     transform: "translateX(50%)",
-                    opacity: "0.3",
+                    opacity: "0.5",
                   }}
                 />
               </span>
@@ -48,6 +39,7 @@ export function Header() {
               href={"https://app.alino.online"}
               height={40}
               iconRight={false}
+              backgroundColor="rgb(69, 0, 87)"
               activeBorder
             />
           </div>

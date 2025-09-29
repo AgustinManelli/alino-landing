@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  padding: 150px 0px;
+  margin-top: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,59 +10,171 @@
   position: relative;
   max-width: 1366px;
   width: 100%;
-  margin: 0 120px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 48px;
+  margin: 0px 120px 0px 120px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .containerSection h2 {
   color: #1c1c1c;
-  font-size: 36px;
-  max-width: 300px;
+  font-size: 48px;
   font-weight: 800;
+  line-height: 1.2;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #ff933a, #b546ff, #46d4ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
 }
 
 .bentoGrid {
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 .card {
   position: relative;
-  min-height: 250px;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgb(245, 245, 245);
+  min-height: 320px;
+  max-height: 320px;
+  height: 320px;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: rgb(245, 245, 245);
+  padding: 5px;
 }
 
-.cn1 {
-  width: calc(50% - 13.33px);
+.cardImgFull {
+  padding: 0;
+}
+
+.cardContent {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+.cardHero {
+  grid-column: span 2;
+}
+
+.cardHero .cardContent {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.cardHero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  padding: 3px;
+  background: linear-gradient(135deg, #ff933a, #b546ff, #46d4ff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.cardHero:hover::before {
+  opacity: 1;
+}
+
+.cardMedium {
+  grid-column: span 1;
+}
+
+.cardLarge {
+  grid-column: span 2;
+}
+
+.cardWide {
+  grid-column: span 2;
+}
+
+.cardSmall {
+  grid-column: span 1;
+}
+
+.imageContainer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cardImage {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.cardImageFull {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.iconContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 80px;
+  filter: grayscale(20%);
 }
 
 .textContainer {
   display: flex;
   justify-content: center;
   align-items: end;
-  gap: 5px;
+  gap: 8px;
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2;
 }
 
 .textContainer p {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 400;
   background: linear-gradient(170deg, #bbbbbb 20%, #1c1c1c);
   -webkit-background-clip: text;
@@ -73,7 +185,7 @@
 
 .textContainer span {
   font-weight: 900;
-  font-size: 25px;
+  font-size: 22px;
   background: linear-gradient(90deg, #ff933a, #b546ff, #46d4ff);
   -webkit-background-clip: text;
   background-clip: text;
@@ -81,18 +193,88 @@
   display: inline-block;
 }
 
-.cn2 {
-  width: calc(25% - 13.33px);
+@media only screen and (max-width: 850px) {
+  .containerSection {
+    margin: 0px 20px;
+  }
 }
-.cn3 {
-  width: calc(25% - 13.33px);
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardHero,
+  .cardLarge,
+  .cardWide {
+    grid-column: span 2;
+  }
+
+  .cardMedium,
+  .cardSmall {
+    grid-column: span 1;
+  }
 }
-.cn4 {
-  width: calc(25% - 13.33px);
+
+@media (max-width: 768px) {
+  .containerSection {
+    gap: 32px;
+  }
+
+  .containerSection h2 {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .bentoGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cardHero,
+  .cardMedium,
+  .cardLarge,
+  .cardWide,
+  .cardSmall {
+    grid-column: span 1;
+  }
+
+  .card {
+    min-height: 280px;
+  }
+
+  .textContainer p {
+    font-size: 24px;
+  }
+
+  .textContainer span {
+    font-size: 24px;
+  }
+
+  .icon {
+    font-size: 60px;
+  }
 }
-.cn5 {
-  width: calc(50% - 13.33px);
-}
-.cn6 {
-  width: calc(25% - 13.33px);
+
+@media (max-width: 480px) {
+  .containerSection h2 {
+    font-size: 28px;
+  }
+
+  .textContainer {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .textContainer p {
+    font-size: 20px;
+  }
+
+  .textContainer span {
+    font-size: 20px;
+  }
 }

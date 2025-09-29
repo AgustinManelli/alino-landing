@@ -39,7 +39,7 @@
   width: 100%;
 }
 
-.text::before {
+/* .text::before {
   content: "";
   position: absolute;
   width: 150%;
@@ -57,14 +57,14 @@
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 1;
-}
+} */
 
 .text h1 {
   font-size: clamp(30px, 10vw, 60px);
   font-weight: 700;
   -webkit-user-select: none;
   user-select: none;
-  color: rgb(135, 24, 157);
+  color: #ffffff;
   text-align: center;
   z-index: 1;
 }
@@ -85,9 +85,9 @@
 }
 
 .text p {
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(18px, 3vw, 22px);
-  color: #aaaaaa;
+  color: #ffffff;
   max-width: 500px;
   text-align: center;
   z-index: 1;

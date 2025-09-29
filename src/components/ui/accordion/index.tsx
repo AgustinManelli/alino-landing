@@ -1,6 +1,5 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import { ChevronDown } from 'lucide-react';
 import styles from "./accordion.module.css";
 import { ArrowThin } from "../icons/icons";
 
