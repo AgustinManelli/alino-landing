@@ -2,21 +2,44 @@
   position: relative;
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   z-index: 2;
-  padding: 100px 0;
+  padding: 0 5px;
+}
+
+.containerFrame {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 100px 0px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  box-shadow: rgba(12, 20, 66, 0.02) 0px 4px 12px,
+    rgba(12, 20, 66, 0.08) 0px 30px 80px,
+    rgb(230, 233, 237) 0px 0px 0px 0px inset;
 }
 
 .containerLimit {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
   width: 100%;
   max-width: 1366px;
   height: fit-content;
   margin: 0 120px;
+}
+
+.containerLimit h2 {
+  color: #1c1c1c;
+  font-size: 36px;
+  max-width: 300px;
+  font-weight: 800;
 }
 
 .cardsContainer {

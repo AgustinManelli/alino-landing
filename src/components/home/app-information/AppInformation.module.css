@@ -13,6 +13,24 @@
   margin: 0 120px;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.containerSection h2 {
+  color: #1c1c1c;
+  font-size: 36px;
+  max-width: 300px;
+  font-weight: 800;
+}
+
+.bentoGrid {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;

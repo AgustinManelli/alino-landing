@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: fit-content;
 }
 
@@ -13,7 +13,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* max-width: 1366px; */
   max-width: 1000px;
   height: fit-content;
   margin: 0 120px 0 120px;
@@ -62,7 +61,7 @@
 
 .text h1 {
   font-size: clamp(30px, 10vw, 60px);
-  font-weight: 500;
+  font-weight: 700;
   -webkit-user-select: none;
   user-select: none;
   color: rgb(135, 24, 157);

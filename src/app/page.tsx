@@ -7,6 +7,7 @@ import Faq from "@/components/home/faq";
 import Footer from "@/components/home/footer";
 
 import navbar_blur from "./../../public/images/navbar_blur.webp";
+import { AppInformation } from "@/components/home/app-information";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <Cards />
+      <AppInformation />
       <Faq />
       <Footer />
     </main>
