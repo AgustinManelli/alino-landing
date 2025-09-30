@@ -10,7 +10,7 @@ export default function Faq() {
           <h2>
             Preguntas <span className={styles.highlight}>frecuentes</span>
           </h2>
-          <p className={styles.subtitle}>¿Tienes dudas sobre Alino?</p>
+          <p className={styles.subtitle}>¿Tienes alguna duda?</p>
         </div>
         <Accordion
           items={[
@@ -22,12 +22,12 @@ export default function Faq() {
             {
               title: "¿Alino es gratis?",
               content:
-                "Sí, Alino es completamente gratuito. Si deseas apoyar su desarrollo y el mantenimiento de los servidores, puedes hacerlo a través de donaciones en <a href='https://cafecito.app/alinoapp' target='_blank'>Cafecito</a>. ¡Tu apoyo es invaluable, pero el simple hecho de que uses Alino ya significa mucho para nosotros!",
+                "Sí, Alino es completamente gratuito. Si deseas apoyar su desarrollo, puedes hacerlo a través de donaciones en <a href='https://cafecito.app/alinoapp' target='_blank'>Cafecito</a>. ¡Tu apoyo es invaluable, pero el simple hecho de que uses Alino ya significa mucho para nosotros!",
             },
             {
               title: "¿Necesito una cuenta?",
               content:
-                "Sí, actualmente puedes usar la aplicación registrandote <a href='https://app.alino.online' target='_blank'>aquí</a> con una cuenta de google o github, aunque planeamos integrar un sistema de autentificación propio para que tu cuenta sea 100% personalizable.",
+                "Sí, actualmente puedes usar la aplicación registrandote <a href='https://app.alino.online/sign-in' target='_blank'>aquí</a> con una cuenta de google o github, aunque planeamos integrar un sistema de autentificación propio para que tu cuenta sea 100% personalizable.",
             },
             {
               title: "¿Puedo enviar feedback o reportar bugs?",
